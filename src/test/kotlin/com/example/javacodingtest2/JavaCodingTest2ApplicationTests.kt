@@ -26,13 +26,13 @@ class JavaCodingTest2ApplicationTests {
         val fileAndFolderService = FileAndFolderService()
         val folder = fileAndFolderService.createFileAndFolderFromJson((JSONParser().parse(file1Resource.inputStream) as JSONArray))
 
-        Assertions.assertNotNull(folder)
-//        Assertions.assertEquals(FileAndFolderService().getMaxDepth(folder!!), 7)
+        //Assertions.assertNotNull(folder)
+        Assertions.assertEquals(FileAndFolderService().getMaxDepth(folder!!), 7)
 
         val folder2 = fileAndFolderService.createFileAndFolderFromJson((JSONParser().parse(file2Resource.inputStream) as JSONArray))
 
-        Assertions.assertNotNull(folder2)
-//        Assertions.assertEquals(FileAndFolderService().getMaxDepth(folder2!!), 8)
+        //Assertions.assertNotNull(folder2)
+        Assertions.assertEquals(FileAndFolderService().getMaxDepth(folder2!!), 8)
 
 //        Assertions.assertEquals(fileAndFolderService.validateFolderFromJson((JSONParser().parse(file2Resource.inputStream) as JSONArray)), true)
 //        Assertions.assertEquals(fileAndFolderService.validateFolderFromJson((JSONParser().parse(file3Resource.inputStream) as JSONArray)), false)
